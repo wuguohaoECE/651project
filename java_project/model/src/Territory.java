@@ -3,6 +3,11 @@ public class Territory {
     private Player territoryOwner;
     private int territoryUnits;
 
+    public Territory(String name, Player owner, int unit) {
+        this.territoryName = name;
+        this.territoryOwner = owner;
+        this.territoryUnits = unit;
+    }
     public String getName() {
         return territoryName;
     }
@@ -30,4 +35,6 @@ public class Territory {
     public void lossUnits(int num){
         territoryUnits -= num;
     }
+
+
 }

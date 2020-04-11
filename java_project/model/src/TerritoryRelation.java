@@ -3,6 +3,10 @@ import java.util.*;
 public class TerritoryRelation {
     private HashMap<Territory, HashSet<Territory>> territoryGraph;
 
+    public TerritoryRelation(HashMap<Territory, HashSet<Territory>> territoryGraph) {
+        this.territoryGraph = territoryGraph;
+    }
+
     public boolean checkReachable(Territory A, Territory B){
         Player OwnerA = A.getOwner();
         Player OwnerB = B.getOwner();

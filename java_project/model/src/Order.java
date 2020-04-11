@@ -5,6 +5,13 @@ public abstract class Order {
     protected int unit;
     protected String type;
 
+    public Order(Player orderer, Territory from, Territory to, int unit, String type){
+        this.player = orderer;
+        this.from = from;
+        this.to = to;
+        this.unit = unit;
+        this.type = type;
+    }
     public Player getPlayer(){
         return player;
     }

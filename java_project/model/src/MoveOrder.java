@@ -1,5 +1,8 @@
 public class MoveOrder extends Order {
-    @Override
+
+    public MoveOrder(Player orderer, Territory from, Territory to, int unit){
+        super(orderer,from,to,unit, "MoveOrder");
+    }
     public void execute() {
         from.lossUnits(unit);
         to.addUnits(unit);

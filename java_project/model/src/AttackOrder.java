@@ -1,7 +1,9 @@
 public class AttackOrder extends Order {
-    @Override
+    public AttackOrder(Player orderer, Territory from, Territory to, int unit){
+        super(orderer,from,to,unit, "AttackOrder");
+    }
     public void execute() {
-        int To_Unit = to.getUnits();
+        int To_Unit = unit;
         int From_Unit = from.getUnits();
         while(To_Unit != 0 && From_Unit != 0){
             if(Math.random() < 0.5){
@@ -20,5 +22,6 @@ public class AttackOrder extends Order {
             //defender win
             to.setUnits(To_Unit);
         }
+        from.lossUnits(unit);
     }
 }
