@@ -101,7 +101,7 @@ public class testModel {
         System.out.println("before attack, Oz: " + Oz.getUnits() + " Mordor :  " +  Mordor.getUnits() + " onwed by " + Mordor.getOwner().getName());
         AttackOrder order2  = new AttackOrder(green,Oz,Mordor,10);
         order2.execute();
-        System.out.println("after move, Oz: " + Oz.getUnits() + " Mordor :  " +  Mordor.getUnits()+ " onwed by " + Mordor.getOwner().getName());
+        System.out.println("after attack, Oz: " + Oz.getUnits() + " Mordor :  " +  Mordor.getUnits()+ " onwed by " + Mordor.getOwner().getName());
 
 
     }
